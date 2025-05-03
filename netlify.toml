@@ -1,0 +1,14 @@
+# netlify.toml
+[build]
+  # No static site generation, just build the functions
+  functions = "netlify/functions" # Directory where functions live
+
+[functions]
+  # esbuild is the default bundler for Netlify functions
+  node_bundler = "esbuild"
+
+# Optional: If you want functions available without the /.netlify/functions prefix
+# [[redirects]]
+#   from = "/api/*"
+#   to = "/.netlify/functions/satnogs-proxy/:splat"
+#   status = 200
