@@ -8,7 +8,8 @@
   node_bundler = "esbuild"
 
 # Optional: If you want functions available without the /.netlify/functions prefix
-# [[redirects]]
-#   from = "/api/*"
-#   to = "/.netlify/functions/satnogs-proxy/:splat"
-#   status = 200
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/satnogs-proxy/:splat"
+  # Status code for the rewrite (proxy)
+  status = 200
