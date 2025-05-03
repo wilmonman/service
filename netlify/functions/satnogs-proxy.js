@@ -4,7 +4,7 @@ const axios = require('axios');
 const SATNOGS_NETWORK_API_URL = process.env.SATNOGS_NETWORK_API_URL || 'https://network.satnogs.org/api';
 const SATNOGS_DB_API_URL = process.env.SATNOGS_DB_API_URL || 'https://db.satnogs.org/api';
 
-const isDevelopment = process.env.CONTEXT === 'dev';
+const isDevelopment = process.env.CONTEXT === 'Development';
 const productionAllowedOrigin = process.env.ALLOWED_ORIGIN_URL;
 const ALLOWED_ORIGIN = isDevelopment ? '*' : (productionAllowedOrigin || '*');
 
